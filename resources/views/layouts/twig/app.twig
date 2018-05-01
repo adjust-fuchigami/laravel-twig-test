@@ -1,0 +1,21 @@
+{% extends 'layouts.twig.base' %}
+
+
+{% block content %}
+    <div class="row">
+        <div class="col-8">
+            {% block main_content %}
+                <h3>メインコンテンツ</h3>
+            {% endblock %}
+        </div>
+        <div class="col-4">
+            {% block side_content %}
+                <h4>サイドバーコンテンツ1</h4>
+                <h4>サイドバーコンテンツ2</h4>
+                <h4>サイドバーコンテンツ3</h4>
+                <h4>サイドバーコンテンツ4</h4>
+                <h4>サイドバーコンテンツ5</h4>
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}

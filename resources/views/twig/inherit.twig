@@ -1,0 +1,12 @@
+{% extends 'layouts.twig.app' %}
+
+{% block title %}継承{% endblock %}
+
+{% block main_content %}
+    <h3>メインコンテンツ上書き</h3>
+{% endblock %}
+
+{% block side_content %}
+    {{parent()}}
+    <h4>サイドバーコンテンツ追加</h4>
+{% endblock %}

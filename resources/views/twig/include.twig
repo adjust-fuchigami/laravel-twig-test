@@ -1,0 +1,29 @@
+{% extends 'layouts.twig.app' %}
+
+{% block title %}継承{% endblock %}
+
+{% block main_content %}
+    <h3>メインコンテンツ上書き</h3>
+    <div class="row">
+        <div class="col-12 mt-3">
+          <h5>最近のお知らせ</h5>
+          {% include 'twig.partials.infomations' with {infomations: infomations} %}
+        </div>
+        <div class="col-12 mt-3">
+          <h5>最近の投稿</h5>
+          {% include 'twig.partials.posts' with {posts: posts} %}
+        </div>
+        <div class="col-12 mt-3">
+            {% include 'twig.partials.banner_area_1' %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block side_content %}
+    {{parent()}}
+    <h4>サイドバーコンテンツ追加</h4>
+    {% include 'twig.partials.banner_area_2' %}
+    {% include 'twig.partials.banner_area_3' %}
+    {% include 'twig.partials.banner_area_4' %}
+    {% include 'twig.partials.banner_area_5' %}
+{% endblock %}

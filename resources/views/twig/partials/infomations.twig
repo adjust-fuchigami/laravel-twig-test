@@ -1,0 +1,7 @@
+{% for infomation in infomations%}
+    {% if loop.first %}<ul class="list-group list-group-flush">{% endif %}
+    {% include 'twig.partials.infomations_row' with {'infomation': infomation} %}    
+    {% if loop.last %}</ul>{% endif %}
+{% else %}
+    <p>お知らせはありません</p>
+{% endfor %}
